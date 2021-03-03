@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plist HTML Viewer</title>
+
+    <meta charset="UTF-8">
+
+    <style type="text/css">
+      ${icon_css}
+      ${style_css}
+      ${table_css}
+      ${buglist_css}
+    </style>
+
+    <script>
+      ${browser_support}
+      ${bug_list}
+
+      window.onload = function () {
+        if (!browserCompatible) {
+          setNonCompatibleBrowserMessage();
+        } else {
+          BugList.init()
+        }
+      }
+    </script>
+  </head>
+  <body>
+  <div class="container">
+    <a href="statistics.html" class="button">Go To Statistics</a>
+    <table id="report-list">
+      ${table_reports}
+    </table>
+  </div>
+  </body>
+</html>
